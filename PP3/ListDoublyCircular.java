@@ -162,4 +162,69 @@ public class ListDoublyCircular<T> implements ListInterface<T> {
         }
         System.out.println();
     }
+
+    // --- Método main para la ejecución y prueba ---
+
+    public static void main(String[] args) {
+        // Validación para evitar el error de índice fuera de límites si no se pasa 'n'.
+        if (args.length == 0) {
+             System.out.println("Error: Falta el argumento 'n'. Configura el launch.json o ejecuta con: java ListDoublyCircular <numero>");
+             return;
+        }
+        var n = Integer.parseInt(args[0]);
+        ListInterface<Integer> list = new ListDoublyCircular<Integer>();
+        var arrayDeque = new ArrayDeque<Integer>();
+        var random = new Random();
+        for (var counter = n * 2; counter > 0; counter--) {
+            var value = random.nextInt(0, 10);
+            list.addFirst(value);
+            arrayDeque.addFirst(value);
+            value = random.nextInt(0, 10);
+            list.addLast(value);
+            arrayDeque.addLast(value);
+        }
+        System.out.println();
+        System.out.println("List {added: n * 4}: " + arrayDeque);
+        System.out.println(" ↳ Size: " + list.getSize());
+        System.out.println(" ↳ Empty: " + list.isEmpty());
+        System.out.println(" ↳ First: " + list.getFirst());
+        System.out.println(" ↳ Last: " + list.getLast());
+        System.out.print(" ↳ Reverse: ");
+        list.printListInReverse();
+        System.out.println(" ↳ Print: ");
+        list.printList();
+        for (var counter = n; counter > 0; counter--) {
+            list.removeFirst();
+            arrayDeque.removeFirst();
+            list.removeLast();
+            arrayDeque.removeLast();
+        }
+        System.out.println();
+        System.out.println("List {removed: n * 2}: " + arrayDeque);
+        System.out.println(" ↳ Size: " + list.getSize());
+        System.out.println(" ↳ Empty: " + list.isEmpty());
+        System.out.println(" ↳ First: " + list.getFirst());
+        System.out.println(" ↳ Last: " + list.getLast());
+        System.out.print(" ↳ Reverse: ");
+        list.printListInReverse();
+        System.out.println(" ↳ Print: ");
+        list.printList();
+        for (var counter = arrayDeque.size(); counter > 0; counter--) {
+            list.removeFirst();
+            list.removeLast();
+        }
+        arrayDeque.clear();
+        System.out.println();
+        System.out.println("List {empty}: " + arrayDeque);
+        list.removeFirst();
+        list.removeLast(); 
+        System.out.println(" ↳ Size: " + list.getSize());
+        System.out.println(" ↳ Empty: " + list.isEmpty());
+        System.out.println(" ↳ First: " + list.getFirst());
+        System.out.println(" ↳ Last: " + list.getLast());
+        System.out.print(" ↳ Reverse: ");
+        list.printListInReverse();
+        System.out.println(" ↳ Print: ");
+        list.printList();
+    }
 }
