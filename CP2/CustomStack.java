@@ -7,7 +7,7 @@ public class CustomStack {
     }
 
     public void push(String word) {
-        // ChatGPT — push al INICIO (top)
+       
 
         StackNode newNode = new StackNode(word);
         newNode.setNext(_head);
@@ -41,7 +41,7 @@ public class CustomStack {
     }
 
     public String getWords() {
-        // ChatGPT — convertir pila a formato: (N) [ ... ]
+        
 
         StringBuilder builder = new StringBuilder("(")
                 .append(size())
