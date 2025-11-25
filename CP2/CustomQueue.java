@@ -7,7 +7,7 @@ public class CustomQueue {
     }
 
     public void enqueue(int index) {
-        // ChatGPT — encolar al FINAL
+        
 
         QueueNode newNode = new QueueNode(index);
 
@@ -23,7 +23,7 @@ public class CustomQueue {
     }
 
     public int dequeue() {
-        // ChatGPT — desencolar desde INICIO
+       
 
         if (_head == null) {
             return -1;
@@ -49,7 +49,7 @@ public class CustomQueue {
     }
 
     public String getIndexes() {
-        // ChatGPT — convertir cola a string formateado
+        
 
         StringBuilder builder = new StringBuilder();
 
