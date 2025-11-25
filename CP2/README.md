@@ -1,9 +1,15 @@
 📄 README – Caso Práctico #2 (Recuperación de Información Textual)
+
 👤 Estudiante: Joshua Mitchell
+
 📚 Curso: Lenguajes de Base de Datos – SC-504
+
 🗂️ Proyecto: CP2 – Recuperación de Información Textual
+
 🛠️ Lenguaje: Java
+
 🔧 IDE sugerido: Visual Studio Code / IntelliJ / Terminal
+
 📘 Descripción General
 
 Este proyecto implementa un sistema de recuperación de información textual utilizando varias estructuras de datos desarrolladas manualmente en Java:
