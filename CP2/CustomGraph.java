@@ -15,7 +15,7 @@ public class CustomGraph {
     }
 
     private void addEdge(char source, char target) {
-        // ChatGPT — usar binarySearch para encontrar índices
+        
 
         int src = Arrays.binarySearch(_chars, source);
         int tgt = Arrays.binarySearch(_chars, target);
@@ -26,7 +26,7 @@ public class CustomGraph {
     }
 
     public String getMatrix() {
-        // ChatGPT — construir CSV
+       
 
         StringBuilder builder = new StringBuilder(" ");
 
